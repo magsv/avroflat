@@ -19,5 +19,7 @@ The script accepts 2 commandline parameters
 
 e.g. python avro_flat "TEST1.avpr" "~/resultschemas"
 
+The script has just been tested briefly with the avrogencpp generator so no guarantee....
+
 
 
