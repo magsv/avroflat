@@ -18,7 +18,6 @@ def main(avprFile,outputFolder):
 
 def checkAndProcessSchema(schemaName,jsonData,outputDir):
 	#check if we have a protocol definition on the schema
-	#if "protocol" in jsonData:
 	logging.info('Found protocol schema:'+schemaName)
 	writeJsonToFile(schemaName,outputDir,jsonData,jsonData['namespace'])
 
@@ -36,7 +35,7 @@ def writeJsonToFile(schemaName,outputDir,data,namespace):
 
 def buildFolderNameForSchema(outputDir,namespace):
 	#replace all dots with slashes in namespace
-	outputNameSpaceFolder=namespace.replace(".","/")
+	outputNameSpaceFolder=namespace.replace(".",os.sep)
 	return os.path.join(outputDir,outputNameSpaceFolder)
 
 if __name__ == '__main__':
